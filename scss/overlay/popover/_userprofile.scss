@@ -1,7 +1,7 @@
-@use "../../top/border" as bd;
+@use "../../border" as bd;
 
 // ---- User profile popover ----
 // User roles
-.role__631a3 {
+.role_d81130 {
     @include bd.border(thin);
 }

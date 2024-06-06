@@ -6,5 +6,6 @@
 /bundle
 /src
 
-# Social images
-/preview
+# Preview
+/preview/*.kra
+/preview/*.*~
