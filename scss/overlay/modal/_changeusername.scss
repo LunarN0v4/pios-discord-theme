@@ -1,0 +1,7 @@
+@use "../../vars" as *;
+@use "../../hsla";
+
+// Change your username modal
+.questionMark-3V9mGJ {
+    background-color: hsla.default($accent-hue, 0.2);
+}

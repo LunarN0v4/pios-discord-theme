@@ -1,0 +1,12 @@
+@use "../../vars" as *;
+@use "../../border" as bd;
+
+// ---- Upload file by drag and drop modal ----
+.uploadModalIn_c0e1db .uploadDropModal_cfadae .bgScale_f4bff5 {
+    background: $background-color;
+    @include bd.border(thick, bright);
+}
+
+.uploadModalIn_c0e1db .uploadDropModal_cfadae .inner__7afe9 {
+    border: 0;
+}

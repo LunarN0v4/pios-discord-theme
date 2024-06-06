@@ -1,0 +1,27 @@
+@use "../../vars" as *;
+@use "../../border" as bd;
+@use "../../hsla";
+
+// Event and new event modal
+// Event card
+.appMount_c99875 .previewCard__980d0,
+.card__7865b {
+    @include bd.border(thin);
+}
+
+// Event cover image
+.imageUploaderInner_ecfc97 {
+    background-color: hsla.default($accent-hue, 0.2);
+}
+
+.avatarUploadIcon__8f828.hideDefaultIcon_f99092 {
+    background-color: hsla.default($accent-hue, 0.7);
+}
+
+.imageUploaderIcon__4b7d2 path {
+    fill: $bright-color;
+}
+
+.eventStatusGreen__4f804 {
+    color: $accent-color;
+}

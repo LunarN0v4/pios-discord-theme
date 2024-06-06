@@ -1,0 +1,8 @@
+@use "../../vars" as *;
+@use "../../border" as bd;
+
+// ---- Typing channel/user/command/etc. autocomplete popover ----
+.appMount_c99875 .autocomplete__743a5 {
+    background: $background-color;
+    @include bd.border(thin);
+}

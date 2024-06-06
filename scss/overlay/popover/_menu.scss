@@ -1,0 +1,25 @@
+@use "../../vars" as *;
+@use "../../hsla";
+
+// ---- General menu popover ----
+// Option in menu when hovered
+.colorDefault_e361cf {
+    &.focused_dcafb9 {
+        background-color: hsla.default($accent-hue, 0.2);
+    }
+    &:active:not(.hideInteraction__0b569) {
+        background-color: hsla.default($accent-hue, 0.7);
+    }
+    .checkbox__378d3,
+    .radioSelection__41d1e {
+        color: $accent-color;
+    }
+}
+// Menu slider bar
+.barFill__1f56b {
+    background: $accent-color;
+}
+// Menu selected option checkbox
+.activeIcon_b2fa28 path {
+    fill: $accent-color;
+}

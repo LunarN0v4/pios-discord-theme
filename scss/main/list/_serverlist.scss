@@ -1,0 +1,29 @@
+@use "../../vars" as *;
+@use "../../hsla";
+
+// ---- Servers sidebar ----
+// Unread server/channel dot
+.unread__48cf4,
+.item_f9d377 {
+    background-color: $accent-color;
+}
+
+// "New" bubble in servers sidebar
+.mention_dd733a {
+    background-color: $accent-color;
+}
+
+// Switch to DMs button
+.wrapper__8436d.selected_ae80f7 .childWrapper_a6ce15,
+.wrapper__8436d:hover .childWrapper_a6ce15 {
+    background-color: hsla.default($accent-hue, 0.7);
+}
+
+// Add a server / explore public servers button
+.circleIconButton__05cf2 {
+    color: $accent-color;
+}
+
+.circleIconButton__05cf2.selected_aded59 {
+    background-color: hsla.default($accent-hue, 0.7);
+}

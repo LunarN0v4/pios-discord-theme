@@ -1,0 +1,119 @@
+@use "../vars" as *;
+@use "../border" as bd;
+@use "../font";
+@use "../hsla";
+
+@font-face {
+    font-family: "FixedSysTrue";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    src: url("https://saltssaumure.github.io/pios-discord-theme/font/FixedSysTrue.ttf");
+}
+
+@font-face {
+    font-family: "PerfectDOS";
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-osx-font-smoothing: grayscale;
+    src: url("https://saltssaumure.github.io/pios-discord-theme/font/PerfectDosVga.ttf");
+}
+
+:root {
+    // Set default fonts
+    @include font.lang-font($font-latin, $font-code);
+    letter-spacing: -0.04rem;
+}
+
+:lang(bg),
+:lang(el),
+:lang(ru),
+:lang(uk) {
+    @include font.lang-font($font-cyrillic, $font-code);
+}
+:lang(zh-CN) {
+    @include font.lang-font($font-chinese-simplified, $font-code);
+}
+:lang(zh-TW) {
+    @include font.lang-font($font-chinese-traditional, $font-code);
+}
+:lang(ja) {
+    @include font.lang-font($font-japanese, $font-code);
+}
+:lang(ko) {
+    @include font.lang-font($font-korean, $font-code);
+}
+
+// All caps on areas where case is not so important
+// importantly: excludes message text, searches, emoji, and status text
+.name__4eb92,
+// channel names
+.activityUserPopout_eceeb9,
+// now playing game and time
+.protip-2urNh2,
+// "right click user for more actions (not changed?)
+.roleName__851c9,
+// roles
+.timestamp_c79dd2,
+// message timestamp
+.divider__855e3,
+// day dividers
+.children_cde9af,
+// channel name and desc
+.navButton_b588d0,
+// emoji/gif picker buttons
+.categoryName_f25cbb,
+// gif picker categories
+.side_b4b3f6 // settings list
+{
+    text-transform: uppercase;
+}
+
+// Selected text
+::selection {
+    background: hsla.default($accent-hue, 0.7);
+}
+
+// Code blocks and inline
+.markup_a7e664 code.hljs,
+.markup_a7e664 code.inline {
+    font-family: var(--font-code);
+    @include bd.border(thin, bright);
+    padding: 1px 8px 3px 8px;
+}
+
+// Code in replied message
+.markup_a7e664.repliedTextContent_b12fe1 code.inline {
+    padding: 1px 8px 2px 8px;
+}
+
+// Underline #channels and @pings
+.appMount_c99875 .wrapper__4ef2e {
+    text-decoration: underline;
+    background: $embed-color;
+}
+
+// User, role, and channel mentions
+.appMount_c99875 .mention {
+    color: $bright-color;
+}
+
+// Fix font size of channel group and user group labels to match others
+.da-username,
+.container__43554,
+.name-3YKhmS {
+    font-size: 16px;
+}
+
+// [user] created thread, pinned message, joined server, etc. alert message
+.content__945f5 {
+    text-transform: uppercase;
+}
+
+.content__945f5 a {
+    text-transform: none;
+}
+
+.compact_e39360 {
+    margin-left: 0;
+}

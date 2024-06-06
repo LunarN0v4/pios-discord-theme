@@ -1,0 +1,96 @@
+@use "../vars" as *;
+@use "../hsla";
+
+// Messages from Clyde now appear as SYSTEM
+.compact_eda3c8.wrapper_a62503.ephemeral_eb5d84,
+.cozyMessage__9f4fd.wrapper_a62503.ephemeral_eb5d84,
+.message_ccca67.ephemeral_eb5d84.selected_e3bc5d,
+.mouse-mode.full-motion .ephemeral_eb5d84:hover {
+    border-color: hsla.default($accent-hue, 0.7);
+    background-color: transparent;
+}
+
+// No left bar
+.ephemeral_eb5d84:before {
+    display: none;
+}
+
+// Change popout banner
+[aria-label="Clyde"] .popoutBanner__3fbe8 {
+    background-color: $background-color !important;
+}
+
+// Change avatar
+.ephemeral_eb5d84 .avatar__08316 {
+    filter: contrast(2) saturate(100) invert(1);
+}
+
+.full-motion .avatar__08316.clickable__09456:hover {
+    filter: hue-rotate(130deg) contrast(2) saturate(100);
+}
+
+// Change name
+.ephemeral_eb5d84 .username__0b0e7 {
+    visibility: hidden;
+    padding-right: 0.5rem;
+}
+
+.ephemeral_eb5d84 .username__0b0e7::after {
+    visibility: visible;
+    content: "SYSTEM";
+    display: block;
+    color: $clyde-color;
+    position: absolute;
+    top: -0.15rem;
+    left: 0;
+    background: linear-gradient(transparent, $background-color 40%, transparent 60%);
+}
+
+.ephemeral_eb5d84 .username__0b0e7:hover::after {
+    text-decoration: underline;
+}
+
+// Totally not a bot
+.ephemeral_eb5d84 .botTag__11e95 {
+    display: none;
+}
+
+// Timestamp
+.ephemeral_eb5d84 .timestamp_c79dd2,
+.ephemeral_eb5d84 .timestamp_c79dd2.alt__6c563 {
+    color: $clyde-color-dim;
+}
+
+// Content
+.ephemeral_eb5d84 .markup_a7e664 {
+    color: $clyde-color;
+    text-shadow:
+        2px 0 10px $clyde-color,
+        -2px 0 10px $clyde-color;
+    text-transform: uppercase;
+
+    code {
+        text-transform: none;
+    }
+}
+
+// Dismiss message box
+.ephemeralMessage__24192 {
+    color: $clyde-color-dim;
+    font-size: 100%;
+    text-transform: uppercase;
+}
+
+.compact_eda3c8 .ephemeralMessage__24192 {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(transparent, $background-color 50%, transparent 70%);
+    bottom: -1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.ephemeralMessage__24192 .anchor_c8ddc0 {
+    color: $clyde-color;
+}

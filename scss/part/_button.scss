@@ -1,0 +1,46 @@
+@use "../vars" as *;
+@use "../hsla";
+
+// Filled button with discord blue background
+.lookFilled__950dd.colorBrand__27d57 {
+    background: $accent-color;
+
+    &:hover {
+        background: $accent-color;
+    }
+}
+
+// Buttons
+.lookFilled__950dd.colorBrand__27d57,
+.lookFilled__950dd.colorBrand__27d57:disabled,
+.lookFilled__950dd.colorPrimary_ebe632,
+.lookFilled__950dd.colorBrandNew__8872c {
+    background-color: hsla.default($accent-hue, 0.3);
+}
+
+.lookFilled__950dd.colorBrand__27d57:hover,
+.lookFilled__950dd.colorPrimary_ebe632:hover,
+.lookFilled__950dd.colorBrandNew__8872c:hover {
+    background-color: hsla.default($accent-hue, 0.7);
+}
+
+.lookFilled__950dd.colorBrand__27d57:active,
+.lookFilled__950dd.colorPrimary_ebe632:active,
+.lookFilled__950dd.colorBrandNew__8872c:active {
+    background-color: $accent-color;
+}
+
+// Green buttons
+.lookOutlined__014b5.colorGreen__75c93 {
+    background-color: hsla.default($accent-hue, 0.2);
+}
+
+// Red buttons
+.lookFilled__950dd.colorRed__5a617 {
+    background: $accent-color;
+}
+
+// Dangerous buttons when hovered
+.button_d4bf9b.dangerous__8fbad:hover {
+    color: $bright-color;
+}
